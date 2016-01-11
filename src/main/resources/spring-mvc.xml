@@ -9,10 +9,13 @@
                         http://www.springframework.org/schema/context  
                         http://www.springframework.org/schema/context/spring-context-3.1.xsd  
                         http://www.springframework.org/schema/mvc  
-                        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+                        http://www.springframework.org/schema/mvc/spring-mvc.xsd">                       
+    <mvc:annotation-driven/>
+	<mvc:resources mapping="/resources/**" location="/WEB-INF/resources/"/>
+	
 	<!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器 -->
 	<context:component-scan base-package="com.thomsonreuters.springmvc.controller" />
-	
+		
 	<mvc:interceptors>  
 	    <!-- 国际化操作拦截器 如果采用基于（请求/Session/Cookie）则必需配置 --> 
 	    <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" />  
@@ -29,6 +32,7 @@
 			</list>
 		</property>
 	</bean>
+	
 	<!-- 启动SpringMVC的注解功能，完成请求和注解POJO的映射 -->
 	<bean
 		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
@@ -38,12 +42,25 @@
 			</list>
 		</property>
 	</bean>
-	<!-- 定义跳转的文件的前后缀 ，视图模式配置-->
-	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<!-- 这里的配置我的理解是自动给后面action的方法return的字符串加上前缀和后缀，变成一个 可用的url地址 -->
-		<property name="prefix" value="/WEB-INF/jsp/" />
-		<property name="suffix" value=".jsp" />
+	
+	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+	    <property name="definitions">
+	        <list>
+	            <value>classpath:tiles-um.xml</value>
+	        </list>
+	    </property>
 	</bean>
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+	    <property name="order" value="1" />
+	    <property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView"></property>
+	</bean>
+	<bean
+	    class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	    <property name="prefix" value="/WEB-INF/jsp/" />
+	    <property name="suffix" value=".jsp" />
+	    <property name="order" value="2" />
+	</bean>
+	
 	
 	<!-- 配置文件上传，如果没有使用文件上传可以不用配置，当然如果不配，那么配置文件中也不必引入上传组件包 -->
 	<bean id="multipartResolver"  
