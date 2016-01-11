@@ -23,16 +23,16 @@
  
     <definition name="um.userList" extends=".base">
     	<put-attribute name="title" value="User Management" />
-        <put-attribute name="content" value="/WEB-INF/jsp/pages/um/userList.jsp" />
+        <put-attribute name="content" value="/WEB-INF/jsp/pages/am/userList.jsp" />
     </definition>
     
     <definition name="um.userPreference" extends=".base">
     	<put-attribute name="title" value="User Preference" />
-        <put-attribute name="content" value="/WEB-INF/jsp/pages/um/showUser.jsp" />
+        <put-attribute name="content" value="/WEB-INF/jsp/pages/am/showUser.jsp" />
     </definition>
     <!--definition name="um.createUser" extends=".base">
     	<put-attribute name="title" value="Create User" />
-        <put-attribute name="content" value="/WEB-INF/jsp/pages/um/createUser.jsp" />
+        <put-attribute name="content" value="/WEB-INF/jsp/pages/am/createUser.jsp" />
     </definition-->
  
 </tiles-definitions>

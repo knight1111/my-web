@@ -1,4 +1,4 @@
-package com.thomsonreuters.springmvc.controller;
+package com.thomsonreuters.modules.am.controller;
 
 import javax.annotation.Resource;
 
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.thomsonreuters.springmvc.domain.User;
-import com.thomsonreuters.springmvc.service.IUserService;
+import com.thomsonreuters.modules.am.domain.User;
+import com.thomsonreuters.modules.am.service.IUserService;
 
 @Controller
 @RequestMapping("/user")

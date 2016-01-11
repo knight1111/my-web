@@ -11,8 +11,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.thomsonreuters.springmvc.domain.User;
-import com.thomsonreuters.springmvc.service.IUserService;
+import com.thomsonreuters.modules.am.domain.User;
+import com.thomsonreuters.modules.am.service.IUserService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath:spring-mybatis.xml" })

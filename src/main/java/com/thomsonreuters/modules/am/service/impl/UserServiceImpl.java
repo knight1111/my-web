@@ -1,12 +1,12 @@
-package com.thomsonreuters.springmvc.service.impl;
+package com.thomsonreuters.modules.am.service.impl;
 
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.thomsonreuters.springmvc.IDao.UserDao;
-import com.thomsonreuters.springmvc.domain.User;
-import com.thomsonreuters.springmvc.service.IUserService;
+import com.thomsonreuters.modules.am.IDao.UserDao;
+import com.thomsonreuters.modules.am.domain.User;
+import com.thomsonreuters.modules.am.service.IUserService;
 
 @Service("userService")
 public class UserServiceImpl implements IUserService {

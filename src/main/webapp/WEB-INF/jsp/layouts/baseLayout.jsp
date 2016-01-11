@@ -6,15 +6,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title><tiles:getAsString name="title" /></title>
-<link href="../resources/opensource/bootstrap/3.2.0/css/bootstrap.min.css"
+<link href="../static/opensource/bootstrap/3.2.0/css/bootstrap.min.css"
 	type="text/css" charset="UTF-8" rel="stylesheet" />
-<link href="../resources/frontend/css/main.css" type="text/css"
+<link href="../static/frontend/css/main.css" type="text/css"
 	charset="UTF-8" rel="stylesheet" />
 <link rel="stylesheet" type="text/css"
-	href="../resources/opensource/datatables/1.10.7/integration/bootstrap/3/dataTables.bootstrap.css">
-<script src="../resources/opensource/jquery/jquery-2.1.1.min.js"
+	href="../static/opensource/datatables/1.10.7/integration/bootstrap/3/dataTables.bootstrap.css">
+<script src="../static/opensource/jquery/jquery-2.1.1.min.js"
 	type="text/javascript"></script>
-<script src="../resources/opensource/bootstrap/3.2.0/js/bootstrap.min.js"
+<script src="../static/opensource/bootstrap/3.2.0/js/bootstrap.min.js"
 	type="text/javascript"></script>
 </head>
 <body>

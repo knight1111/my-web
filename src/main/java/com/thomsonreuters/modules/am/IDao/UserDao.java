@@ -1,6 +1,6 @@
-package com.thomsonreuters.springmvc.IDao;
+package com.thomsonreuters.modules.am.IDao;
 
-import com.thomsonreuters.springmvc.domain.User;
+import com.thomsonreuters.modules.am.domain.User;
 
 public interface UserDao {
     int deleteByPrimaryKey(Integer id);

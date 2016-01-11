@@ -1,4 +1,4 @@
-package com.thomsonreuters.springmvc.domain;
+package com.thomsonreuters.modules.am.domain;
 
 public class User {
     private Integer id;

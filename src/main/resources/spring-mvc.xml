@@ -11,10 +11,10 @@
                         http://www.springframework.org/schema/mvc  
                         http://www.springframework.org/schema/mvc/spring-mvc.xsd">                       
     <mvc:annotation-driven/>
-	<mvc:resources mapping="/resources/**" location="/WEB-INF/resources/"/>
+	<mvc:resources mapping="/static/**" location="/WEB-INF/static/"/>
 	
 	<!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器 -->
-	<context:component-scan base-package="com.thomsonreuters.springmvc.controller" />
+	<context:component-scan base-package="com.thomsonreuters.modules" />
 		
 	<mvc:interceptors>  
 	    <!-- 国际化操作拦截器 如果采用基于（请求/Session/Cookie）则必需配置 --> 
